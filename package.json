@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-technical-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test -C client -- --watchAll=false && npm run test -C server -- --watchAll=false",
+    "client": "cd client && npm run start",
+    "server": "cd server && nodemon src/server.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnnguyen/fullstack-technical-test.git"
+  },
+  "author": "nnnguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnnguyen/fullstack-technical-test/issues"
+  },
+  "homepage": "https://github.com/nnnguyen/fullstack-technical-test#readme"
+}
